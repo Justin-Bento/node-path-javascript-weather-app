@@ -2,6 +2,9 @@
 
 This is the third project within the JavaScript Course for The Odin Project. Its goal is to help me get familiar with using everything we’ve been discussing to create a weather forecast site using the Visual Crossing API. You should be able to search for a specific location and toggle displaying the data in Fahrenheit or Celsius.
 
+- Project Start Date: Tuesday 21st January 2024.
+- Project End Date:
+
 ## Features
 
 - Search for a location and get the current weather.
@@ -41,7 +44,3 @@ Alternatively, you can deploy the project using services like GitHub Pages or Ne
 - CSS
 - JavaScript
 - Visual Crossing API
-
-```
-
-```
