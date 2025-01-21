@@ -8,3 +8,10 @@ This is the third project within the JavaScript Course for The Odin Project. Its
 - Display the weather data in either Fahrenheit or Celsius.
 - Toggle between the two units of temperature.
 - Fetch weather information from the Visual Crossing API.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Visual Crossing API
