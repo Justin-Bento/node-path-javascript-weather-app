@@ -1,6 +1,9 @@
 /* style.css */
-
+* {
+  font-family: Helvetica, sans-serif;
+}
 body {
+  font-family: inherit;
   color: hsla(0, 0, 10%, 1);
   background-color: hsla(0, 0, 95%, 1);
 }
