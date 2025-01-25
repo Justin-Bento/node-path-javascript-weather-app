@@ -3,6 +3,8 @@
   font-family: Helvetica, sans-serif;
 }
 body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   font-family: inherit;
   color: hsla(0, 0, 10%, 1);
   background-color: hsla(0, 0, 95%, 1);
