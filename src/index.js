@@ -3,6 +3,7 @@ import { greeting } from "./greeting.js";
 
 const node = document.querySelector(".content");
 const section = document.createElement("section");
+section.setAttribute("class", ["container"]);
 node.appendChild(section); // Append the heading to the node
 
 const heading = document.createElement("h1");
