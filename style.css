@@ -9,6 +9,16 @@ body {
 main {
   min-height: 100dvh;
 }
+
+header,
+footer,
+main,
+section,
+article {
+  overflow: hidden;
+  container-type: inline-size;
+}
+
 h1,
 h2,
 h3,
@@ -17,11 +27,13 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
 p,
 li,
 figcaption {
   max-width: 65ch;
 }
+
 .heading {
   font-size: 1.25rem;
   line-height: calc(1.75rem / 1.25rem);
