@@ -1,4 +1,8 @@
 /* style.css */
+:root {
+  --black: hsl(0, 0, 10%);
+  --white: hsl(0, 0%, 98%);
+}
 * {
   font-family: Helvetica, sans-serif;
 }
@@ -6,6 +10,6 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-family: inherit;
-  color: hsla(0, 0, 10%, 1);
-  background-color: hsla(0, 0, 95%, 1);
+  color: var(--black);
+  background-color: var(--white);
 }
