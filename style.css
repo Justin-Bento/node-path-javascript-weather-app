@@ -17,6 +17,18 @@ header section {
   align-items: center;
   justify-content: space-between;
 }
+header section div:first-of-type h1 {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+}
+header section div:first-of-type p {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+}
+header section div:first-of-type * {
+  margin: 0;
+  padding: 0;
+}
 
 main {
   min-height: 100dvh;
