@@ -42,6 +42,17 @@ header {
   align-content: center;
   gap: 1rem;
 }
+.top-navigation-child-2 a {
+  text-decoration: none;
+  color: var(--gray-800);
+}
+.top-navigation-child-2 a:hover {
+  text-decoration: underline;
+  color: var(--gray-700);
+}
+.top-navigation-child-2 a:focus {
+  color: blueviolet;
+}
 main {
   min-height: 100dvh;
 }
