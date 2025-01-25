@@ -9,3 +9,8 @@ body {
 main {
   min-height: 100dvh;
 }
+.heading {
+  font-size: 1.25rem;
+  line-height: calc(1.75rem / 1.25rem);
+  text-transform: capitalize;
+}
