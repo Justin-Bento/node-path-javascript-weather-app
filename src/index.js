@@ -1,4 +1,7 @@
 import "./style.css";
 import { greeting } from "./greeting.js";
 
-console.log(greeting);
+const node = document.querySelector(".content");
+const heading = document.createElement("h1");
+heading.textContent = greeting;
+node.appendChild(heading); // Append the heading to the node
