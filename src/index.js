@@ -7,7 +7,7 @@ section.setAttribute("class", ["container"]);
 node.appendChild(section);
 
 async function getData() {
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?key=2M3RGP5QK2USQD7ETY5S6RA6P`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?key=${process.env.WEATHER_API_KEY}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
