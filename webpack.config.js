@@ -1,6 +1,9 @@
 // webpack.config.js
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
@@ -16,6 +19,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+    }),
+    new NodePolyfillPlugin(),
+    new Dotenv({
+      path: "./.env.local",
     }),
   ],
   module: {
