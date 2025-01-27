@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "nodeenv": "^3.0.75",
     "save-dev": "^0.0.1-security",
     "webpack": "^5.97.1",
     "webpack-cli": "^6.0.1"
