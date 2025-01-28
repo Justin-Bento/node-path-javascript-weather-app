@@ -8,20 +8,40 @@ const section = document.createElement("section");
 section.setAttribute("class", ["container"]);
 node.appendChild(section);
 
-async function getData() {
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?key=${process.env.WEATHER_API_KEY}`;
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
-    const json = await response.json();
-    Address.textContent = json.resolvedAddress;
-    description.textContent = json.description;
-    console.log(json);
-  } catch (error) {
-    console.error(error.message);
-  }
-}
+const GlobalWeather = {
+  // Define a method to set country information
+  CountryInfo: function (address, description) {
+    this.address = address; // Store address
+    this.description = description; // Store description
+  },
 
-getData();
+  // Define the method to fetch and display the weather data
+  InitializeFetchRequest: async function () {
+    const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?key=${process.env.WEATHER_API_KEY}`;
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const json = await response.json();
+
+      // Create a new CountryInfo object using the fetched data
+      const country = new this.CountryInfo(
+        json.resolvedAddress,
+        json.description
+      );
+
+      // Use the properties of the country object to update the DOM elements
+      Address.textContent = country.address;
+      description.textContent = country.description;
+
+      console.log(json); // Log the full JSON response for debugging
+    } catch (error) {
+      console.error(error.message); // Handle any errors during the fetch
+    }
+  },
+};
+
+// Call the getData function to fetch and display the weather data
+GlobalWeather.InitializeFetchRequest();
