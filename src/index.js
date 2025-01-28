@@ -1,5 +1,6 @@
 import "./style.css";
 import { greeting } from "./greeting.js";
+const Address = document.querySelector(".country-address");
 
 const node = document.querySelector(".content");
 const section = document.createElement("section");
@@ -14,9 +15,7 @@ async function getData() {
       throw new Error(`Response status: ${response.status}`);
     }
     const json = await response.json();
-    const heading = document.createElement("h1");
-    heading.textContent = json.resolvedAddress;
-    section.appendChild(heading);
+    Address.textContent = json.resolvedAddress;
   } catch (error) {
     console.error(error.message);
   }
