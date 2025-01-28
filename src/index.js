@@ -1,6 +1,7 @@
 import "./style.css";
 import { greeting } from "./greeting.js";
 const Address = document.querySelector(".country-address");
+const description = document.querySelector(".country-description");
 
 const node = document.querySelector(".content");
 const section = document.createElement("section");
@@ -16,6 +17,8 @@ async function getData() {
     }
     const json = await response.json();
     Address.textContent = json.resolvedAddress;
+    description.textContent = json.description;
+    console.log(json);
   } catch (error) {
     console.error(error.message);
   }
