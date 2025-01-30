@@ -66,10 +66,19 @@ main {
 .content form fieldset {
   border: transparent;
 }
+.content form fieldset input[type="text"] {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  background-color: var(--gray-50);
+  border: 1px solid var(--gray-900);
+}
 .content form fieldset input[type="submit"] {
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--gray-50);
   text-transform: capitalize;
@@ -79,7 +88,7 @@ main {
 .content form fieldset #change-metric {
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--gray-50);
   text-transform: capitalize;
