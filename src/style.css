@@ -66,6 +66,26 @@ main {
 .content form fieldset {
   border: transparent;
 }
+.content form fieldset input[type="submit"] {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--gray-50);
+  text-transform: capitalize;
+  background-color: var(--gray-700);
+  border: none;
+}
+.content form fieldset #change-metric {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  color: var(--gray-50);
+  text-transform: capitalize;
+  background-color: var(--gray-700);
+  border: none;
+}
 /* Dropdown Button */
 footer {
   color: var(--gray-50);
