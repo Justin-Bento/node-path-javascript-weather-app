@@ -66,6 +66,12 @@ main {
 .content form fieldset {
   border: transparent;
 }
+.content form fieldset legend {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  letter-spacing: 0.005rem;
+  font-weight: bold;
+}
 .content form fieldset input[type="text"] {
   padding: 0.5rem 1.25rem;
   border-radius: 0.25rem;
