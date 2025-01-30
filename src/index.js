@@ -2,6 +2,9 @@ import "./style.css";
 import { greeting } from "./greeting.js";
 const Address = document.querySelector(".country-address");
 const description = document.querySelector(".country-description");
+const weatherMeasurement = document.querySelector("#change-metric");
+
+weatherMeasurement.textContent = "Change to C";
 
 const node = document.querySelector(".content");
 const section = document.createElement("section");
