@@ -1,9 +1,9 @@
 # Project: Weather App
 
-The goal is to create a weather forecast site using the Visual Crossing API from previous lessons inside The Odin Project. As well as help me gain practical expereince working with Asynchronous JavaScript and APIs and dynamic data.
+The goal of this project is to create a weather forecast site using the Visual Crossing API. While I'll be using code from previous lessons taught by The Odin Project in their Full Stack Javascript course. Starting this project will help me gain practical experience using Asynchronous JavaScript and APIs and dynamic data in real world scenarios.
 
 - Started: 25th January 2025
-- 
+-
 
 ## Project Features
 
@@ -20,43 +20,57 @@ The goal is to create a weather forecast site using the Visual Crossing API from
 - Webpack
   - HTML
   - CSS
-  - HTML IMAGE 
--  Node Env
--  JavaScript Dom Manipulation
--  Tailwind CSS
+  - HTML IMAGE
+- Node Env
+- JavaScript Dom Manipulation
+- Tailwind CSS
 
 ## Installation
 
 1. Head into a folder where you keep your development projects.
+
 ```
 cd /development
 ```
+
 2. Clone this repository onto your local computer.
+
 ```
 git clone git@github.com:Justin-Bento/node-path-javascript-weather-app.git
 ```
+
 3. Head into the project folder and
+
 ```
 cd /your/path//here/node-path-javascript-weather-app
 ```
+
 4. open your editor. (Mine is visusal studio code)
+
 ```
   code .
 ```
+
 5. Create an env file .env.local file and adding your key.
+
 ```
 touch .env.local
 ```
-6.  Add a variable called "weather-app" to your env file and apply your custom key there. 
+
+6.  Add a variable called "weather-app" to your env file and apply your custom key there.
+
 ```
 weather-app="YOUR-API-KEY"
 ```
+
 7. Install node dependencies with with npm
+
 ```bash
-npm i 
-``` 
+npm i
+```
+
 8. Run the development server
+
 ```
 npm run dev
 ```
-
