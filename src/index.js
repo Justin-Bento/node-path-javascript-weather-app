@@ -1,5 +1,4 @@
 import "./style.css";
-import { greeting } from "./greeting.js";
 const Address = document.querySelector(".country-address");
 const description = document.querySelector(".country-description");
 const weatherMeasurement = document.querySelector("#change-metric");
@@ -12,7 +11,7 @@ section.setAttribute("class", ["container"]);
 node.appendChild(section);
 
 const GlobalWeather = {
-  // Define a method to set country information
+  // Define a method to set country  information
   CountryInfo: function (address, description) {
     this.address = address; // Store address
     this.description = description; // Store description
