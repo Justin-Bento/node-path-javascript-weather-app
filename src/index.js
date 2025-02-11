@@ -30,8 +30,8 @@ const GlobalWeather = {
 
       // Create a new CountryInfo object using the fetched data
       const country = new this.CountryInfo(
-        json.resolvedAddress,
-        json.description
+        json.resolvedAddress || "Address not available",
+        json.description || "'Description not available'"
       );
 
       // Use the properties of the country object to update the DOM elements
