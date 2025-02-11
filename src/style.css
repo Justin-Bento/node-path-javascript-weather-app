@@ -24,6 +24,15 @@ body {
   color: var(--gray-950);
   background-color: var(--gray-50);
 }
+section {
+  margin-top: 2rem;
+}
+section *:first-of-type {
+  margin-top: 0.5rem;
+}
+section ul {
+  margin-left: 2rem;
+}
 .container {
   width: 83.333333%;
   margin: 0rem auto;
