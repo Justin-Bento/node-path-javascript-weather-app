@@ -21,19 +21,6 @@ const GlobalWeather = {
     this.description = description; // Store description
   },
 
-  // Add Layout to Fetch data
-  WebsiteLayout: function (json) {
-    // Create a new CountryInfo object using the fetched data
-    const country = new this.CountryInfo(
-      json.resolvedAddress || "Address not available",
-      json.description || "Description not available"
-    );
-    
-    // Use the properties of the country object to update the DOM elements
-    Address.textContent = country.address;
-    description.textContent = country.description;
-  },
-
   // Define the method to fetch and display the weather data
   InitializeFetchRequest: async function () {
     const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?key=${process.env.WEATHER_API_KEY}`;
@@ -44,9 +31,6 @@ const GlobalWeather = {
         throw new Error(`Response status: ${response.status}`);
       }
       const json = await response.json();
-
-      // Pass the fetched data to WebsiteLayout
-      this.WebsiteLayout(json);
 
       console.log(json); // Log the full JSON response for debugging
     } catch (error) {
