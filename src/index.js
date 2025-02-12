@@ -1,12 +1,6 @@
 import "./style.css";
 
-// Get DOM elements
-const Address = document.querySelector(".country-address");
-const description = document.querySelector(".country-description");
-const weatherMeasurement = document.querySelector("#change-metric");
 
-// Initial text for the metric toggle button
-weatherMeasurement.textContent = "Change to C";
 
 // Create and append a new section for layout
 const node = document.querySelector(".content");
