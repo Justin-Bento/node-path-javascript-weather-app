@@ -4,6 +4,7 @@ const currentWeatherConditions = document.querySelector(
   ".curent-weather-conditions"
 );
 // const forcastInformation = document.querySelector(".forcast-information");
+// const additionalInformation = document.querySelector(".additional-information");
 
 async function getData() {
   //
