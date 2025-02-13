@@ -41,7 +41,9 @@ async function getData() {
       }`;
       locationInfromation.appendChild(latitudeLi);
     }
+
     displayLocationInfo();
+
     function displayCurrentWeatherConditions() {
       // If there's at least one day of data
       if (days && days.length > 0) {
