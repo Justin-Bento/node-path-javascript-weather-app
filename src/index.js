@@ -8,8 +8,9 @@ const searchCountryQuery = document.querySelector("#search-country");
 // const additionalInformation = document.querySelector(".additional-information");
 
 async function getData() {
-  //
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchCountryQuery.value}?unitGroup=metric&key=${process.env.WEATHER_API_KEY}&contentType=json`;
+  const country = searchCountryQuery.value.trim() || "Toronto"; // Default to Toronto if input is empty
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${country}?unitGroup=metric&key=${process.env.WEATHER_API_KEY}&contentType=json`;
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
