@@ -3,6 +3,7 @@ const locationInfromation = document.querySelector(".country-address");
 const currentWeatherConditions = document.querySelector(
   ".curent-weather-conditions"
 );
+const searchCountryQuery = doocument.querySelector("#search-country");
 // const forcastInformation = document.querySelector(".forcast-information");
 // const additionalInformation = document.querySelector(".additional-information");
 
