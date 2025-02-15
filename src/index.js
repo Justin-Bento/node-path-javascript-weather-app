@@ -9,7 +9,7 @@ const searchCountryQuery = doocument.querySelector("#search-country");
 
 async function getData() {
   //
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London?unitGroup=metric&key=${process.env.WEATHER_API_KEY}&contentType=json`;
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchCountryQuery.value}?unitGroup=metric&key=${process.env.WEATHER_API_KEY}&contentType=json`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
