@@ -18,6 +18,12 @@ async function getData() {
     const json = await response.json();
     const days = json.days;
 
+    function createListItem(parent, label, value) {
+      const li = document.createElement("li");
+      li.textContent = `${label}: ${value || "Not available"}`;
+      parent.appendChild(li);
+    }
+
     function displayLocationInfo() {
       // Assuming the data you want is inside json.address, json.timezone, etc.
       const { address, timezone, latitude, longitude } = json;
