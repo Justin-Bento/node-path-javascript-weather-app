@@ -36,20 +36,13 @@ async function getData() {
         document.body.appendChild(ulElement);
       }
 
-      // Create <li> elements and append them to the <ul>
-      const addressLi = document.createElement("li");
-      addressLi.textContent = `City Name: ${address || "Not available"}`;
-      locationInfromation.appendChild(addressLi);
-
-      const timezoneLi = document.createElement("li");
-      timezoneLi.textContent = `Country: ${timezone || "Not available"}`;
-      locationInfromation.appendChild(timezoneLi);
-
-      const latitudeLi = document.createElement("li");
-      latitudeLi.textContent = `Latitude/Longitude : ${
-        latitude + "/" + longitude || "Not available"
-      }`;
-      locationInfromation.appendChild(latitudeLi);
+      createListItem(locationInfromation, "City Name", address);
+      createListItem(locationInfromation, "Country", timezone);
+      createListItem(
+        locationInfromation,
+        "Latitude/Longitude",
+        `${latitude}/${longitude}`
+      );
     }
 
     displayLocationInfo();
@@ -82,53 +75,54 @@ async function getData() {
           }
           // Add day data as <li> items in the DOM
 
-          const dateLi = document.createElement("li");
-          dateLi.textContent = `Date: ${datetime}`;
-          currentWeatherConditions.appendChild(dateLi);
-
-          const tempMaxLi = document.createElement("li");
-          tempMaxLi.textContent = `Max Temperature: ${tempmax}°C`;
-          currentWeatherConditions.appendChild(tempMaxLi);
-
-          const tempMinLi = document.createElement("li");
-          tempMinLi.textContent = `Min Temperature: ${tempmin}°C`;
-          currentWeatherConditions.appendChild(tempMinLi);
-
-          const currentTempLi = document.createElement("li");
-          currentTempLi.textContent = `Current Temperature: ${temp}°C`;
-          currentWeatherConditions.appendChild(currentTempLi);
-
-          const feelsLikeMaxLi = document.createElement("li");
-          feelsLikeMaxLi.textContent = `Feels Like Max: ${feelslikemax}°C`;
-          currentWeatherConditions.appendChild(feelsLikeMaxLi);
-
-          const feelsLikeMinLi = document.createElement("li");
-          feelsLikeMinLi.textContent = `Feels Like Min: ${feelslikemin}°C`;
-          currentWeatherConditions.appendChild(feelsLikeMinLi);
-
-          const feelsLikeLi = document.createElement("li");
-          feelsLikeLi.textContent = `Feels Like: ${feelslike}°C`;
-          currentWeatherConditions.appendChild(feelsLikeLi);
-
-          const dewLi = document.createElement("li");
-          dewLi.textContent = `Dew Point: ${dew}°C`;
-          currentWeatherConditions.appendChild(dewLi);
-
-          const humidityLi = document.createElement("li");
-          humidityLi.textContent = `Humidity: ${humidity}%`;
-          currentWeatherConditions.appendChild(humidityLi);
-
-          const precipLi = document.createElement("li");
-          precipLi.textContent = `Precipitation: ${precip}mm`;
-          currentWeatherConditions.appendChild(precipLi);
-
-          const precipProbLi = document.createElement("li");
-          precipProbLi.textContent = `Precipitation Probability: ${precipprob}%`;
-          currentWeatherConditions.appendChild(precipProbLi);
-
-          const precipCoverLi = document.createElement("li");
-          precipCoverLi.textContent = `Precipitation Cover: ${precipcover}%`;
-          currentWeatherConditions.appendChild(precipCoverLi);
+          createListItem(currentWeatherConditions, "Date", datetime);
+          createListItem(
+            currentWeatherConditions,
+            "Max Temperature",
+            `${tempmax}°C`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Min Temperature",
+            `${tempmin}°C`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Current Temperature",
+            `${temp}°C`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Feels Like Max",
+            `${feelslikemax}°C`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Feels Like Min",
+            `${feelslikemin}°C`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Feels Like",
+            `${feelslike}°C`
+          );
+          createListItem(currentWeatherConditions, "Dew Point", `${dew}°C`);
+          createListItem(currentWeatherConditions, "Humidity", `${humidity}%`);
+          createListItem(
+            currentWeatherConditions,
+            "Precipitation",
+            `${precip}mm`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Precipitation Probability",
+            `${precipprob}%`
+          );
+          createListItem(
+            currentWeatherConditions,
+            "Precipitation Cover",
+            `${precipcover}%`
+          );
         });
       }
     }
