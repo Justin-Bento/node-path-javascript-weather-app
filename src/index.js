@@ -3,7 +3,7 @@ const locationInfromation = document.querySelector(".country-address");
 const currentWeatherConditions = document.querySelector(
   ".curent-weather-conditions"
 );
-const searchCountryQuery = doocument.querySelector("#search-country");
+const searchCountryQuery = document.querySelector("#search-country");
 // const forcastInformation = document.querySelector(".forcast-information");
 // const additionalInformation = document.querySelector(".additional-information");
 
@@ -126,6 +126,10 @@ async function getData() {
       }
     }
     displayCurrentWeatherConditions();
+
+    if (searchCountryQuery.value == "") {
+      return (searchCountryQuery.value = "Toronto");
+    }
 
     console.log(json);
   } catch (error) {
