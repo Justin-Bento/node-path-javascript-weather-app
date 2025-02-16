@@ -1,8 +1,6 @@
 import "./style.css";
 
-const currentWeatherConditions = document.querySelector(
-  ".curent-weather-conditions"
-);
+const currentWeatherConditions = document.querySelector(".curent-conditions");
 const searchCountryQuery = document.querySelector("#search-country");
 const searchCountryButton = document.querySelector("#search-button");
 
