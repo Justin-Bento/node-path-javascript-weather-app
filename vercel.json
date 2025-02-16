@@ -1,14 +1,15 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "webpack.config.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/**/*",
-      "use": "@vercel/static"
+      "source": "/(.*)",
+      "destination": "/"
     }
   ],
-  "outputDirectory": "dist"
+  "cleanUrls": true,
+  "public": true,
+  "parseOptions": {
+    "httpOnly": true,
+    "sameSite": "none",
+    "secure": true
+  }
 }
