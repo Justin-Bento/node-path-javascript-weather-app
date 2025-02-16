@@ -46,8 +46,6 @@ async function getData() {
       );
     }
 
-    displayLocationInfo();
-
     function displayCurrentWeatherConditions() {
       // If there's at least one day of data
       if (days && days.length > 0) {
@@ -127,7 +125,12 @@ async function getData() {
         });
       }
     }
-    displayCurrentWeatherConditions();
+
+    searchCountryButton.addEventListener("click", () => {
+      displayLocationInfo();
+      displayCurrentWeatherConditions();
+      // ...
+    });
 
     console.log(json);
   } catch (error) {
