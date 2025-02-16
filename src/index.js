@@ -126,16 +126,11 @@ async function getData() {
       }
     }
 
-    searchCountryButton.addEventListener("click", () => {
-      displayLocationInfo();
-      displayCurrentWeatherConditions();
-      // ...
-    });
+    displayLocationInfo();
+    displayCurrentWeatherConditions();
 
     console.log(json);
   } catch (error) {
     console.error(error.message);
   }
 }
-
-getData();
