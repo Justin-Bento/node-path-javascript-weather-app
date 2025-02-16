@@ -1,12 +1,10 @@
 import "./style.css";
-const locationInfromation = document.querySelector(".country-address");
+
 const currentWeatherConditions = document.querySelector(
   ".curent-weather-conditions"
 );
 const searchCountryQuery = document.querySelector("#search-country");
 const searchCountryButton = document.querySelector("#search-button");
-// const forcastInformation = document.querySelector(".forcast-information");
-// const additionalInformation = document.querySelector(".additional-information");
 
 async function getData() {
   const country = searchCountryQuery.value.trim() || "Toronto"; // Default to Toronto if input is empty
