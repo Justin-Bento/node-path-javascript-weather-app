@@ -128,10 +128,6 @@ async function getData() {
     }
     displayCurrentWeatherConditions();
 
-    if (searchCountryQuery.value == "") {
-      return (searchCountryQuery.value = "Toronto");
-    }
-
     console.log(json);
   } catch (error) {
     console.error(error.message);
