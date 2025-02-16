@@ -23,101 +23,44 @@ async function getData() {
     }
 
     function displayLocationInfo() {
-      // Assuming the data you want is inside json.address, json.timezone, etc.
       const { address, timezone, latitude, longitude } = json;
 
-      // Create the <ul> dynamically (if it's not already in the HTML)
-      if (!locationInfromation) {
-        const ulElement = document.createElement("ul");
-        ulElement.classList.add("country-address");
-        document.body.appendChild(ulElement);
-      }
+      // Store the location data in an array
+      const locationData = [
+        { label: "City Name", value: address },
+        { label: "Country", value: timezone },
+        { label: "Latitude/Longitude", value: `${latitude}/${longitude}` },
+      ];
 
-      createListItem(locationInfromation, "City Name", address);
-      createListItem(locationInfromation, "Country", timezone);
-      createListItem(
-        locationInfromation,
-        "Latitude/Longitude",
-        `${latitude}/${longitude}`
-      );
+      // Loop through the array and create <li> elements
+      locationData.forEach((item) => {
+        createListItem(locationInformation, item.label, item.value);
+      });
     }
 
     function displayCurrentWeatherConditions() {
-      // If there's at least one day of data
       if (days && days.length > 0) {
         days.forEach((day) => {
-          // Extracting the necessary data for each day
-          const {
-            datetime,
-            tempmax,
-            tempmin,
-            temp,
-            feelslikemax,
-            feelslikemin,
-            feelslike,
-            dew,
-            humidity,
-            precip,
-            precipprob,
-            precipcover,
-          } = day;
-          // Create <ul> dynamically if not present in the DOM
+          // Store the weather data in an array
+          const weatherData = [
+            { label: "Date", value: day.datetime },
+            { label: "Max Temperature", value: `${day.tempmax}°C` },
+            { label: "Min Temperature", value: `${day.tempmin}°C` },
+            { label: "Current Temperature", value: `${day.temp}°C` },
+            { label: "Feels Like Max", value: `${day.feelslikemax}°C` },
+            { label: "Feels Like Min", value: `${day.feelslikemin}°C` },
+            { label: "Feels Like", value: `${day.feelslike}°C` },
+            { label: "Dew Point", value: `${day.dew}°C` },
+            { label: "Humidity", value: `${day.humidity}%` },
+            { label: "Precipitation", value: `${day.precip}mm` },
+            { label: "Precipitation Probability", value: `${day.precipprob}%` },
+            { label: "Precipitation Cover", value: `${day.precipcover}%` },
+          ];
 
-          if (!currentWeatherConditions) {
-            const ulElement = document.createElement("ul");
-            ulElement.classList.add("country-address");
-            document.body.appendChild(ulElement);
-          }
-          // Add day data as <li> items in the DOM
-
-          createListItem(currentWeatherConditions, "Date", datetime);
-          createListItem(
-            currentWeatherConditions,
-            "Max Temperature",
-            `${tempmax}°C`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Min Temperature",
-            `${tempmin}°C`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Current Temperature",
-            `${temp}°C`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Feels Like Max",
-            `${feelslikemax}°C`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Feels Like Min",
-            `${feelslikemin}°C`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Feels Like",
-            `${feelslike}°C`
-          );
-          createListItem(currentWeatherConditions, "Dew Point", `${dew}°C`);
-          createListItem(currentWeatherConditions, "Humidity", `${humidity}%`);
-          createListItem(
-            currentWeatherConditions,
-            "Precipitation",
-            `${precip}mm`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Precipitation Probability",
-            `${precipprob}%`
-          );
-          createListItem(
-            currentWeatherConditions,
-            "Precipitation Cover",
-            `${precipcover}%`
-          );
+          // Loop through the array and create <li> elements
+          weatherData.forEach((item) => {
+            createListItem(currentWeatherConditions, item.label, item.value);
+          });
         });
       }
     }
