@@ -134,3 +134,5 @@ async function getData() {
     console.error(error.message);
   }
 }
+
+searchCountryButton.addEventListener("click", getData());
